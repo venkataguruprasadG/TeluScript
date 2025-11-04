@@ -1,0 +1,11 @@
+# D:\TeluScript\requirements.txt
+# Core ML Framework (Choose one: TensorFlow or PyTorch)
+tensorflow
+# Data manipulation
+numpy
+pandas
+# Audio processing
+librosa
+scipy
+# Utility/Progress tracking
+tqdm
