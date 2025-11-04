@@ -6,7 +6,7 @@ import time
 
 # --- 1. Import Project Component ---
 # We import your transcription function from the other file you created
-from src.transcriber import transcribe_chunk
+from transcriber import transcribe_chunk
 
 # --- 2. Define Streaming Parameters ---
 # These must match the sample rate expected by the Whisper model.
