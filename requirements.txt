@@ -1,11 +1,26 @@
-# D:\TeluScript\requirements.txt
-# Core ML Framework (Choose one: TensorFlow or PyTorch)
-tensorflow
-# Data manipulation
-numpy
-pandas
-# Audio processing
-librosa
-scipy
-# Utility/Progress tracking
-tqdm
+# CORE ML/DATA (From initial list - essential)
+tensorflow  # or pytorch - Choose your main ML framework
+numpy       # Fundamental for array/tensor operations
+pandas      # Useful for loading and managing large datasets (transcripts, metadata)
+tqdm        # Progress bars for training/data processing
+
+# AUDIO PROCESSING & I/O (Crucial additions for LIVE/Streaming ASR)
+librosa     # Best for robust feature extraction (MFCCs, Spectrograms)
+scipy       # General scientific computing, audio file I/O
+sounddevice # NEW! Recommended library for real-time microphone I/O (easier than pyaudio)
+# pyaudio   # ALTERNATIVE to sounddevice - if sounddevice fails, try this.
+
+# REAL-TIME MODEL LIBRARIES (Essential for low-latency inference)
+# CHOOSE ONE OF THESE APPROACHES:
+
+# 1. Faster Whisper (Recommended for best performance with a known model)
+faster-whisper    # NEW! Optimized Whisper implementation for speed and lower latency
+# openai-whisper  # Original Whisper library (kept for reference, but slower)
+# transformers    # Needed if you use Hugging Face pipelines for loading models
+
+# 2. VOSK (Alternative for extreme offline/low-resource requirements)
+# vosk            # NEW! Library based on Kaldi, excellent for fast, offline, streaming ASR
+# pyaudio         # Required dependency for VOSK's microphone examples
+
+# STREAMING FRAMEWORK (For simple web demo/debugging - optional for the final website)
+gradio            # NEW! Excellent for quickly creating a web interface for a live Python demo
